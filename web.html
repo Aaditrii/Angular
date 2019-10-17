@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+					<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+					<script>
+						var app1=angular.module("myapp",[]);
+						app1.controller("myctrl",function($scope){
+							$scope.var=false;
+							$scope.func1=function(){
+								$scope.var=true;
+							}
+							$scope.func2=function(){
+								$scope.var=false;
+							}
+						});
+					</script>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+	<div ng-hide="var">
+	<button ng-click="func1()">get details</button>
+</div>
+	<div ng-show="var">
+		<ul>
+			<li>html</li>
+			<li>css</li>
+			<li>javascript</li>
+			<li>nodejs</li>
+			<li>angular</li>
+		</ul>
+		<button ng-click="func2()">brief</button>
+	</div>
+	</body>
+	</html>
