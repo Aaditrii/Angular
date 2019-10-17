@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+			<script>
+				var app1=angular.module("myapp",[]);
+				app1.controller("myctrl",function($scope){
+					$scope.names=['robert','chris','charlie','husky','hampton'];
+
+				});
+			</script>
+</head>
+<body ng-app="myapp">
+    <ul ng-controller="myctrl">
+    	<li ng-repeat="x in names|filter:'c'">{{x}}</li>
+     </ul>
+	</body>
+	</html>
