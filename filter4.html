@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+			<script>
+				var app1=angular.module("myapp",[]);
+				app1.controller("myctrl",function($scope){
+				$scope.marks=[50,100,5,15,30,39];
+			});
+			</script>
+
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+     <input type="text" ng-model="var">
+     <ul>
+     	<li ng-repeat="x in marks|filter:var">{{x}}</li>
+     </ul>
+	</body>
+	</html>
