@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+				<script>
+					var app1=angular.module("myapp",[]);
+					app1.controller("myctrl",function($scope){
+						$scope.details=[{rollno:1,name:'Aaditri'},{rollno:2,name:'Abhinav'},{rollno:3,name:'reeta'},{rollno:4,name:'aakshi'},{rollno:5,name:'tanisha'},{rollno:6,name:'rakshit Agg'}];
+
+					});
+				</script>
+</head>
+<body ng-app="myapp">
+	<ul ng-controller="myctrl">
+		<li ng-repeat="x in details|orderBy:'name'">{{x.rollno+" "+x.name}}</li>
+	</ul>
+	</body>
+	</html>
