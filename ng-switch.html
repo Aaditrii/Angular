@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="">
+	<select ng-model="var">
+		<option>WP</option>
+		<option>CSA</option>
+		<option>ADBMS</option>
+	</select>
+	<div ng-switch="var">
+		<div ng-switch-when="WP">
+			<p>you have selected WP</p>
+		</div>
+		<div ng-switch-when="CSA">
+			<p>you have selected CSA</p>
+		</div>
+		<div ng-switch-when="ADBMS">
+			<p>you have selected ADBMS</p>
+		</div>
+		<div ng-switch-default>
+			<p>You have not selected any subject .please select any of the mentioned subject</p>
+		</div>
+	</div>
+	</body>
+	</html>
