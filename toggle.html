@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+				<script>
+					var app1=angular.module("myapp",[]);
+					app1.controller("myctrl",function($scope){
+						$scope.var=false;
+						$scope.myfun=function(){
+							$scope.var=!$scope.var;
+						}
+
+					});
+				</script>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+	<button ng-click="myfun()">try me</button>
+	<div ng-show="var">
+		<p>pizza</p>
+		<p>burger</p>
+		<p>lemonade</p>
+	</div>
+	</body>
+	</html>
