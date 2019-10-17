@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+					<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="">
+	<form name="form1">
+	<input type="email" name="f1" ng-model="f1" required>
+	<span ng-show="form1.f1.$error.required">required</span>
+	<span ng-show="form1.f1.$error.email">not a valid email</span>
+	<span ng-show="form1.f1.$valid">correct</span>
+</form>
+</body>
+</html>
