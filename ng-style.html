@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+				<script>
+					var app1=angular.module("myapp",[]);
+					app1.controller("myctrl",function($scope){
+						$scope.value={
+							"background-color":"red",
+							"font-size":"50",
+							"color":"blue"
+						}
+					});
+				</script>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+<h1 ng-style="value">aaditri</h1> 
+	</body>
+	</html>
