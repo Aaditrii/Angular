@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+				<style>
+					input.ng-untouched{
+						background-color:pink;
+					}
+					input.ng-valid{
+						background-color:blue;
+					}
+					input.ng-invalid{
+						background-color:pink;
+					}
+				</style>
+				</script>
+				<script>
+				var app1=angular.module("myapp",[]);
+				app1.controller("myctrl",function($scope){
+					$scope.myobj={
+						"background-color":"pink",
+						"height":"200px",
+						"width":"1000px",
+						"padding":"40px"
+					}
+
+				});
+			</script>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+	<div ng-style="myobj">
+		<form name="myform">
+		<input type="text" name="f1" ng-model="f1" required>
+	</form>
+	</div>
+</body>
+</html>
