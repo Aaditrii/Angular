@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="">
+	<p><h4>try writing an email address in the input field</h4></p>
+	<form name="f1">
+		<input type="email" name="f2" ng-model="f2" required>
+				<span ng-show="f1.f2.$error.required">required</span>
+				<span ng-show="f1.f2.$error.email">not valid email</span>
+		<br/>
+		<br/>
+		<input type="password" name="f3" ng-model="f3" required ng-minlength=5 ng-maxlength=10>
+		<span ng-show="f1.f3.$pristine">required</span>
+		<span ng-show="f1.f3.$error.maxlength">too long</span>
+				<span ng-show="f1.f3.$error.minlength">too short</span>
+
+	</form>
+	</body>
+	</html>
