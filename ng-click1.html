@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+			<script>
+				var app1=angular.module("myapp",[]);
+				app1.controller("myctrl",function($scope){
+					$scope.count1=0;
+					$scope.count2=function(){
+						$scope.count1=$scope.count1+1;
+					}
+
+				});
+			</script>
+</head>
+<body>
+	<div ng-app="myapp" ng-controller="myctrl">
+	<button ng-click="count2()" >try it</button>
+	<p>the button is clicked {{count1}} times</p>
+</div>
+	<body>
+</html>
