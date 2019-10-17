@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script>
+			var app1=angular.module("myapp",[]);
+			app1.controller("myctrl",function($scope){
+				$scope.details=[
+				{Name:'Aaditri',Location:'Paonta Sahib'},{Name:'Aryan',Location:'Pune',},{Name:'Srishti',Location:'Nahan'}
+				];
+			});
+		</script>
+</head>
+<body >
+	<table border="1px" style="border-collapse:collapse;" ng-app="myapp" ng-controller="myctrl">
+		<tr>
+			<th>Name</th>
+			<th>Location</th>
+		</tr>
+		<tr ng-repeat="x in details">
+			<td>{{x.Name}}</td>
+			<td>{{x.Location}}</td>
+		</tr>
+	</table>
+	</body>
+	</html>
