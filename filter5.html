@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+			<script>
+			var app1=angular.module("myapp",[]);
+			app1.controller("myctrl",function($scope){
+			 $scope.details=[{name:'ridhima',color:'red'},{name:'sajal',color:'blue'},{name:'surya',color:'pink'},{name:'avinash',color:'orange'}];
+			$scope.fun1=function(x){
+				$scope.orderby=x;
+			}
+		});
+
+	</script>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+	<table border="1px" cellspacing="0px">
+		<tr>
+			<th ng-click="fun1('name')">name</th>
+			<th ng-click="fun1('color')">color</th>
+		</tr>
+		<tr ng-repeat="x in details|orderBy:orderby">
+			<td>{{x.name}}</td>
+			<td>{{x.color}}</td>
+		</tr>
+	</table>
+	</body>
+	</html>
