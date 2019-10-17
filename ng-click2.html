@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+			<script>
+				var app1=angular.module("myapp",[]);
+				app1.controller("myctrl",function($scope){
+					$scope.total=40;
+					$scope.absent1=function(){
+						$scope.absent=$scope.total-$scope.present;
+					}
+
+				});
+			</script>
+</head>
+<body>
+	<div ng-app="myapp" ng-controller="myctrl">
+		Present:
+		<input type="text" ng-model="present">
+		<button ng-click="absent1()">click</button>
+		<p>the absentees is {{absent}}</p>
+	</div>
+	</body>
+	</html>
